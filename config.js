@@ -1,9 +1,8 @@
-// config.js - 環境設定（GitHub Secrets用）
+// config.js - テンプレート (GitHub ActionsがSecretsで置換する)
 export function loadConfig() {
-    
     return {
-        supabaseUrl: 'https://figycpclqkoarpkkvwxz.supabase.co',
-        supabaseKey: window.SUPABASE_KEY || ""
+        supabaseUrl: '${{ secrets.SUPABASE_URL }}',
+        supabaseKey: '${{ secrets.SUPABASE_KEY }}'
     };
 }
 
