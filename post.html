@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新規投稿 - テスト版</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>新規投稿</h1>
+            <a href="index.html">← 投稿一覧に戻る</a>
+        </header>
 
+        <main class="form-container">
+            <div class="form-box">
+                <form id="post-form">
+                    <input type="text" id="post-title" 
+                           placeholder="タイトル（100文字以内）" 
+                           maxlength="100" required>
+                    
+                    <textarea id="post-content" 
+                              rows="10" 
+                              placeholder="本文を入力してください"
+                              required></textarea>
+                    
+                    <div class="form-footer">
+                        <button type="submit" id="submit-btn">投稿する</button>
+                        <div id="form-message"></div>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p>投稿内容は自動的に処理</p>
+        </footer>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
