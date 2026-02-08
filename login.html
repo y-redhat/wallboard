@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン - 掲示板テスト版</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔐 ログイン</h1>
+            <a href="index.html">← 掲示板に戻る</a>
+        </header>
 
+        <main class="auth-container">
+            <div class="auth-box">
+                <h2>メールアドレスでテスト</h2>
+                <p class="note">※ テスト用：存在しないメールアドレスでも登録可能</p>
+                
+                <form id="auth-form">
+                    <input type="email" id="email" placeholder="メールアドレス" required>
+                    <input type="password" id="password" placeholder="パスワード（6文字以上）" required minlength="6">
+                    <div class="button-group">
+                        <button type="submit" id="signup-btn">新規登録</button>
+                        <button type="submit" id="login-btn">ログイン</button>
+                    </div>
+                </form>
+                
+                <div id="auth-message"></div>
+                
+                <div class="test-account">
+                    <h3>テスト用アカウント</h3>
+                    <p>メール: test@example.com</p>
+                    <p>パスワード: test123</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>テスト版</p>
+        </footer>
+    </div>
+
+    <script type="module" src="auth.js"></script>
+</body>
+</html>
