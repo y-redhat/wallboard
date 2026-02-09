@@ -1,2 +1,2 @@
-　# wallboard
-web掲示板(再建)
+# wallboard
+web掲示板(　再建　)
